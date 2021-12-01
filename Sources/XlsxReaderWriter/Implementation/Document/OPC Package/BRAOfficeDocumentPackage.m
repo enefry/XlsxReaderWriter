@@ -14,7 +14,7 @@
 #import <XlsxReaderWriter/BRARow.h>
 #import <XlsxReaderWriter/BRAColumn.h>
 #import <XlsxReaderWriter/BRACell.h>
-#import "SSZipArchive.h"
+#import <ZipArchive.h>
 
 @interface BRAOfficeDocumentPackage ()
     @property (nonatomic, strong) BRAContentTypes   *  contentTypes;

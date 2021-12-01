@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.osx.frameworks     = "Cocoa"
   s.libraries          = 'z', 'iconv'
 
+  s.dependency 'ZipArchive', '~> 2.4.2'
   s.requires_arc       = true
 
 end

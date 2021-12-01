@@ -1,6 +1,7 @@
 
 target 'XlsxReaderWriter' do
     platform :ios, '9.0'
+    pod 'ZipArchive'
     use_frameworks!
 end
 
