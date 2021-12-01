@@ -16,16 +16,19 @@ let package = Package(
             name: "XlsxReaderWriter",
             targets: ["XlsxReaderWriter"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/ZipArchive/ZipArchive.git",
+             .upToNextMinor(from: "2.4.2")),
+    ]
     targets: [
         .target(
             name: "XlsxReaderWriter",
-            exclude: ["minizip/LICENSE"],
             publicHeadersPath: ".",
             cSettings: [
                 .headerSearchPath("XlsxReaderWriter"),
                 .headerSearchPath("."),
-                .headerSearchPath("minizip"),
             ],
+            dependencies: ["ZipArchive"]
             linkerSettings: [
                 .linkedLibrary("z"),
                 .linkedLibrary("iconv")
